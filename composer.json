@@ -51,6 +51,9 @@
         ],
         "test": [
             "@php vendor/bin/phpunit --colors=always"
+        ],
+        "test-coverage": [
+            "@php vendor/bin/phpunit --colors=always --coverage-html=tests/html-coverage"
         ]
     },
     "config": {

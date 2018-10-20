@@ -32,6 +32,10 @@ My Laravel boot up framework that I use to scaffold projects.
 
 `composer phpcpd` 
 
+**PHP Code Sniffer**
+
+`composer phpcs` does a report to standard out based on PSR12
+
 ## Laravel Boot Automated Functions
 
 - Install Laravel from the create-project format

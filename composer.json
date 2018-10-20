@@ -90,6 +90,10 @@
         "phploc": "Runs phploc and puts output in docs/phploc.txt",
         "phpcs": "Runs phpcs with PSR12 on app and tests folder"
     },
+    "suggest": {
+        "zircote/swagger-php": "For creating OpenAPI documentation from annotations in PHP code",
+        "spatie/laravel-cors": "For adding CORS support to API"
+    },
     "config": {
         "preferred-install": "dist",
         "sort-packages": true,

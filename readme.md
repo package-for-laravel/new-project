@@ -15,3 +15,8 @@ My Laravel boot up framework that I use to scaffold projects.
 **PHPStan / Larastan**
 
 `./artisan code:analyse --level=max --paths="app,tests"`
+
+**IDE Helper**
+
+`composer ide-helper-update`
+

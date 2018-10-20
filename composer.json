@@ -9,7 +9,9 @@
         "laravel/framework": "5.7.*"
     },
     "require-dev": {
+        "barryvdh/laravel-ide-helper": "^2.5",
         "beyondcode/laravel-dump-server": "^1.0",
+        "doctrine/dbal": "^2.8",
         "filp/whoops": "^2.0",
         "fzaninotto/faker": "^1.4",
         "laravel/tinker": "^1.0",
@@ -54,6 +56,12 @@
         ],
         "test-coverage": [
             "@php vendor/bin/phpunit --colors=always --coverage-html=tests/html-coverage"
+        ],
+        "ide-helper-update": [
+            "@php artisan clear-compiled",
+            "@php artisan ide-helper:generate",
+            "@php artisan ide-helper:meta",
+            "@php artisan ide-helper:models --write"
         ]
     },
     "config": {

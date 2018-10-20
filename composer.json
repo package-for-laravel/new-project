@@ -20,7 +20,8 @@
         "nunomaduro/larastan": "^0.3.4",
         "phploc/phploc": "^4.0",
         "phpunit/phpunit": "^7.0",
-        "roave/security-advisories": "dev-master"
+        "roave/security-advisories": "dev-master",
+        "sebastian/phpcpd": "^4.1"
     },
     "autoload": {
         "classmap": [
@@ -72,6 +73,9 @@
         ],
         "phploc": [
             "@php vendor/bin/phploc app tests > docs/phploc.txt"
+        ],
+        "phpcpd": [
+            "@php vendor/bin/phpcpd app tests"
         ]
     },
     "scripts-descriptions": {

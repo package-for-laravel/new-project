@@ -28,6 +28,10 @@ My Laravel boot up framework that I use to scaffold projects.
 
 `composer phploc` generates lines of code output in `docs/phploc.txt`
 
+**PHP Copy Paste Detection**
+
+`composer phpcpd` 
+
 ## Laravel Boot Automated Functions
 
 - Install Laravel from the create-project format

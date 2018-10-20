@@ -20,6 +20,14 @@ My Laravel boot up framework that I use to scaffold projects.
 
 `composer ide-helper-update`
 
+**PHPDoc Generation**
+
+`composer phpdoc` generates documentation in `docs/phpdoc`
+
+**PHP Lines of Code Generation**
+
+`composer phploc` generates lines of code output in `docs/phploc.txt`
+
 ## Laravel Boot Automated Functions
 
 - Install Laravel from the create-project format

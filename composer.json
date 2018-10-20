@@ -18,6 +18,7 @@
         "mockery/mockery": "^1.0",
         "nunomaduro/collision": "^2.0",
         "nunomaduro/larastan": "^0.3.4",
+        "phploc/phploc": "^4.0",
         "phpunit/phpunit": "^7.0",
         "roave/security-advisories": "dev-master"
     },
@@ -68,12 +69,17 @@
         ],
         "phpdoc": [
             "docker run --rm -v $(pwd):/data phpdoc/phpdoc"
+        ],
+        "phploc": [
+            "@php vendor/bin/phploc app tests > docs/phploc.txt"
         ]
     },
     "scripts-descriptions": {
         "test": "Run all PHPUnit tests.",
         "test-coverage": "Run all PHPUnit tests, put HTML coverage in tests/html-coverage",
-        "ide-helper-update": "Runs the ide-helper generate, meta and models command"
+        "ide-helper-update": "Runs the ide-helper generate, meta and models command",
+        "phpdoc": "Runs phpDocumentor phpdoc generation and puts it in docs/phpdoc",
+        "phploc": "Runs phploc and puts output in docs/phploc.txt"
     },
     "config": {
         "preferred-install": "dist",

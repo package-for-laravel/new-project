@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <phpdoc>
+  <title>Laravel Boot</title>
   <parser>
     <target>/tmp</target>
   </parser>

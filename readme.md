@@ -20,3 +20,7 @@ My Laravel boot up framework that I use to scaffold projects.
 
 `composer ide-helper-update`
 
+## Laravel Boot Automated Functions
+
+- Install Laravel from the create-project format
+- Git init local and git add all

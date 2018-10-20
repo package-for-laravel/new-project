@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<phpdoc>
+  <parser>
+    <target>/tmp</target>
+  </parser>
+  <transformer>
+    <target>docs/phpdoc</target>
+  </transformer>
+  <transformations>
+    <template name="clean" />
+  </transformations>
+  <files>
+    <directory>app</directory>
+    <directory>tests</directory>
+  </files>
+</phpdoc>

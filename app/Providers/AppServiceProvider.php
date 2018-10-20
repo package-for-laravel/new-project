@@ -1,4 +1,7 @@
 <?php
+/**
+ * App Service Provider
+ */
 declare(strict_types=1);
 
 namespace App\Providers;

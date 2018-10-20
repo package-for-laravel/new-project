@@ -1,4 +1,7 @@
 <?php
+/**
+ * Basic example test
+ */
 declare(strict_types=1);
 
 namespace Tests\Unit;

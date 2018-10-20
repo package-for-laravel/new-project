@@ -36,3 +36,9 @@ My Laravel boot up framework that I use to scaffold projects.
 
 - Install Laravel from the create-project format
 - Git init local and git add all
+
+## Extending / Recommendations
+
+Creating an API?  Use `composer require --dev zircote/swagger-php` for OpenApi docs.
+
+Need CORS? Try `composer require spatie/laravel-cors`

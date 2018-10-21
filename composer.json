@@ -48,7 +48,7 @@
     "scripts": {
         "post-root-package-install": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\"",
-            "@php -r \"require 'vendor/autoload.php'; file_put_contents('readme.md', PHP_EOL . '## Info' . PHP_EOL . PHP_EOL . 'Laravel Boot Version: ' . \\PackageVersions\\Versions::getVersion('aaronsaray/laravel-boot') . PHP_EOL, FILE_APPEND);\""
+            "@php -r \"require 'vendor/autoload.php'; file_put_contents('readme.md', PHP_EOL . '## Info' . PHP_EOL . PHP_EOL . 'Laravel Boot Version: ' . \\PackageVersions\\Versions::getVersion('aaronsaray/laravel-boot') . PHP_EOL, FILE_APPEND);\"",
             "git init",
             "git add --all"
         ],

@@ -73,7 +73,7 @@
             "docker run --rm -v $(pwd):/data phpdoc/phpdoc"
         ],
         "phploc": [
-            "@php vendor/bin/phploc app tests > docs/phploc.txt"
+            "@php vendor/bin/phploc app bootstrap config database routes tests > docs/phploc.txt"
         ],
         "phpcpd": [
             "@php vendor/bin/phpcpd app tests"

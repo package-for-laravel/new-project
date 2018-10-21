@@ -76,7 +76,7 @@
             "@php vendor/bin/phploc app bootstrap config database routes tests > docs/phploc.txt"
         ],
         "phpcpd": [
-            "@php vendor/bin/phpcpd app tests"
+            "@php vendor/bin/phpcpd app bootstrap config database routes test"
         ],
         "phpcs": [
             "@php vendor/bin/phpcs --standard=PSR12 --colors -p --ignore=tests/html-coverage,bootstrap/cache app bootstrap config database/factories routes tests"

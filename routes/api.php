@@ -1,4 +1,7 @@
 <?php
+/**
+ * Routes for API
+ */
 declare(strict_types=1);
 
 use Illuminate\Http\Request;

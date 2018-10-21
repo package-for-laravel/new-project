@@ -1,4 +1,7 @@
 <?php
+/**
+ * Database Config
+ */
 declare(strict_types=1);
 
 return [

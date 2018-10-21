@@ -12,6 +12,11 @@
   </transformations>
   <files>
     <directory>app</directory>
+    <directory>bootstrap</directory>
+    <ignore>bootstrap/cache/*</ignore>
+    <directory>config</directory>
+    <directory>database</directory>
+    <directory>routes</directory>
     <directory>tests</directory>
   </files>
 </phpdoc>

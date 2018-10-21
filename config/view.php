@@ -1,4 +1,7 @@
 <?php
+/**
+ * View Config
+ */
 declare(strict_types=1);
 
 return [

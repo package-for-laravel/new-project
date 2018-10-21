@@ -79,7 +79,7 @@
             "@php vendor/bin/phpcpd app tests"
         ],
         "phpcs": [
-            "@php vendor/bin/phpcs --standard=PSR12 --colors -p --ignore=tests/html-coverage app tests"
+            "@php vendor/bin/phpcs --standard=PSR12 --colors -p --ignore=tests/html-coverage,bootstrap/cache app bootstrap config database/factories routes tests"
         ]
     },
     "scripts-descriptions": {

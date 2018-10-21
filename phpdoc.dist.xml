@@ -1,22 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <phpdoc>
-  <title>Laravel Boot</title>
-  <parser>
-    <target>/tmp</target>
-  </parser>
-  <transformer>
-    <target>docs/phpdoc</target>
-  </transformer>
-  <transformations>
-    <template name="clean" />
-  </transformations>
-  <files>
-    <directory>app</directory>
-    <directory>bootstrap</directory>
-    <ignore>bootstrap/cache/*</ignore>
-    <directory>config</directory>
-    <directory>database</directory>
-    <directory>routes</directory>
-    <directory>tests</directory>
-  </files>
+    <title>Laravel Boot</title>
+    <parser>
+        <target>/tmp</target>
+        <encoding>utf8</encoding>
+        <extensions>
+            <extension>php</extension>
+        </extensions>
+    </parser>
+    <transformer>
+        <target>docs/phpdoc</target>
+    </transformer>
+    <transformations>
+        <template name="responsive-twig" />
+    </transformations>
+    <files>
+        <directory>app</directory>
+        <directory>bootstrap</directory>
+        <directory>config</directory>
+        <directory>database</directory>
+        <directory>routes</directory>
+        <directory>tests</directory>
+        <ignore>bootstrap/cache/*</ignore>
+    </files>
 </phpdoc>

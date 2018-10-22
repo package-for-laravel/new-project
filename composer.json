@@ -51,14 +51,16 @@
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ],
         "post-create-project-cmd": [
-            "@php artisan key:generate",
-            "@php -r \"require 'vendor/autoload.php'; file_put_contents('readme.md', PHP_EOL . '## Info' . PHP_EOL . PHP_EOL . 'Laravel Boot Version: ' . \\PackageVersions\\Versions::getVersion('aaronsaray/laravel-boot') . PHP_EOL, FILE_APPEND);\"",
-            "git init",
-            "git add --all"
+            "@php artisan key:generate"
         ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
             "@php artisan package:discover"
+        ],
+        "post-package-install": [
+            "@php -r \"require 'vendor/autoload.php'; file_put_contents('readme.md', PHP_EOL . '## Info' . PHP_EOL . PHP_EOL . 'Laravel Boot Version: ' . \\PackageVersions\\Versions::getVersion('aaronsaray/laravel-boot') . PHP_EOL, FILE_APPEND);\"",
+            "git init",
+            "git add --all"
         ],
         "test": [
             "@php vendor/bin/phpunit --colors=always"

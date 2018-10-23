@@ -46,3 +46,9 @@ My Laravel boot up framework that I use to scaffold projects.
 Creating an API?  Use `composer require --dev zircote/swagger-php` for OpenApi docs.
 
 Need CORS? Try `composer require spatie/laravel-cors`
+
+## Todo
+
+- [ ] Figure out how to add git init / add properly after all install - but only the first time.
+- [ ] `"@php -r \"require 'vendor/autoload.php'; file_put_contents('readme.md', PHP_EOL . '## Info' . PHP_EOL . PHP_EOL . 'Laravel Boot Version: ' . \\PackageVersions\\Versions::getVersion('aaronsaray/laravel-boot') . PHP_EOL, FILE_APPEND);\"",`  Can this be used somewhere?
+       

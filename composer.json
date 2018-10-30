@@ -9,6 +9,7 @@
         "laravel/framework": "5.7.*"
     },
     "require-dev": {
+        "aaronsaray/laravel-test-helpers": "^0.0.2",
         "barryvdh/laravel-ide-helper": "^2.5",
         "beyondcode/laravel-dump-server": "^1.0",
         "doctrine/dbal": "^2.8",

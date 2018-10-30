@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a51861157a67f3e41c641e76848c3dd2",
+    "content-hash": "dd466c5a55c3fbb108ae51e193db042f",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -2054,6 +2054,41 @@
         }
     ],
     "packages-dev": [
+        {
+            "name": "aaronsaray/laravel-test-helpers",
+            "version": "0.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/aaronsaray/laravel-test-helpers.git",
+                "reference": "9eafbc87d33371f1a135b34c62768293573122f8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/aaronsaray/laravel-test-helpers/zipball/9eafbc87d33371f1a135b34c62768293573122f8",
+                "reference": "9eafbc87d33371f1a135b34c62768293573122f8",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "AaronSaray\\LaravelTestHelpers\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Aaron Saray",
+                    "email": "aaron@aaronsaray.com"
+                }
+            ],
+            "time": "2018-10-30T00:31:10+00:00"
+        },
         {
             "name": "barryvdh/laravel-ide-helper",
             "version": "v2.5.1",

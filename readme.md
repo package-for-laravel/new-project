@@ -4,6 +4,8 @@ My Laravel boot up framework that I use to scaffold projects.
 
 ## Development Notes
 
+For these, you can run `bin/dev/artisan` or `bin/dev/composer` if you're using the Docker configuration.
+
 **Unit Testing**
 
 `composer test` for tests
@@ -39,6 +41,8 @@ My Laravel boot up framework that I use to scaffold projects.
 ## Laravel Boot Automated Functions
 
 - Install Laravel from the create-project format
+- Copies over `.env.example` to `.env`
+- Copies over `docker-compose.yml.example` to `docker-compose.yml`
 - Git init local and git add all
 
 ## Extending / Recommendations

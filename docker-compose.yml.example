@@ -13,6 +13,15 @@ services:
         ports:
         - "33306:3306"
 
+    mysql-test:
+        image: mysql:5.7
+        container_name: app-mysql-test
+        environment:
+        - MYSQL_ROOT_PASSWORD=password
+        - MYSQL_DATABASE=apptest
+        - MYSQL_USER=app
+        - MYSQL_PASSWORD=app
+
     webserver:
         image: nginx:alpine
         container_name: app-webserver

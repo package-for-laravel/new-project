@@ -84,7 +84,7 @@
             "@php vendor/bin/phpcs"
         ],
         "larastan": [
-            "@php artisan code:analyse  --level=max"
+            "@php artisan code:analyse  --level=max --paths=\"app,tests\""
         ]
     },
     "scripts-descriptions": {

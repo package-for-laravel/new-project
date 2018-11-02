@@ -78,10 +78,13 @@
             "@php vendor/bin/phploc app bootstrap config database routes tests > docs/phploc.txt"
         ],
         "phpcpd": [
-            "@php vendor/bin/phpcpd app bootstrap config database routes test"
+            "@php vendor/bin/phpcpd app bootstrap config database routes tests"
         ],
         "phpcs": [
             "@php vendor/bin/phpcs"
+        ],
+        "larastan": [
+            "@php artisan code:analyse  --level=max"
         ]
     },
     "scripts-descriptions": {
@@ -91,7 +94,8 @@
         "phpdoc": "Runs phpDocumentor phpdoc generation and puts it in docs/phpdoc",
         "phploc": "Runs phploc and puts output in docs/phploc.txt",
         "phpcpd": "Runs phpcpd copy and paste detector",
-        "phpcs": "Runs phpcs with PSR12 on app and tests folder"
+        "phpcs": "Runs phpcs with PSR12 on app and tests folder",
+        "larastan": "Run the Laravel-specific version of PHPStan"
     },
     "suggest": {
         "zircote/swagger-php": "For creating OpenAPI documentation from annotations in PHP code",

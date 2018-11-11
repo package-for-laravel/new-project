@@ -99,7 +99,8 @@
     },
     "suggest": {
         "zircote/swagger-php": "For creating OpenAPI documentation from annotations in PHP code",
-        "spatie/laravel-cors": "For adding CORS support to API"
+        "spatie/laravel-cors": "For adding CORS support to API",
+        "owen-it/laravel-auditing": "For auditing eloquent models"
     },
     "config": {
         "preferred-install": "dist",

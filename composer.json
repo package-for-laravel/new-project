@@ -98,8 +98,7 @@
         "larastan": "Run the Laravel-specific version of PHPStan"
     },
     "suggest": {
-        "zircote/swagger-php": "For creating OpenAPI documentation from annotations in PHP code",
-        "spatie/laravel-cors": "For adding CORS support to API",
+        "aaronsaray/laravel-api-tools": "Tools for a laravel api install.",
         "owen-it/laravel-auditing": "For auditing eloquent models"
     },
     "config": {

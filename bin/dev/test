@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+## for our tests, I really don't want to have xdebug running all the time (need to come up with a better way to do this)
+docker exec -it app-php-fpm mv /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini.disabled
+docker exec -it app-php-fpm vendor/bin/phpunit "$@"
+docker exec -it app-php-fpm mv /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini.disabled /usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini

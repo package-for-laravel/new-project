@@ -8,7 +8,7 @@ For these, you can run `bin/dev/artisan` or `bin/dev/composer` if you're using t
 
 **Unit Testing**
 
-`composer test` for tests
+`composer test` for tests (you can also use `bin/dev/test` followed by any PHPUnit arguments to run the test in docker container)
 
 `composer test-coverage` to generate HTML coverage in `tests/html-coverage`
 

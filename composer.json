@@ -99,6 +99,7 @@
     },
     "suggest": {
         "aaronsaray/laravel-api-tools": "Tools for a laravel api install.",
+        "aaronsaray/laravel-legacy-passwords": "For migrating over old passwords",
         "owen-it/laravel-auditing": "For auditing eloquent models"
     },
     "config": {

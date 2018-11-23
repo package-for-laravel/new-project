@@ -21,7 +21,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        $this->bootDBLogger();
     }
 
     /**
@@ -32,6 +32,19 @@ class AppServiceProvider extends ServiceProvider
     public function register(): void
     {
         $this->registerIdeHelper();
+    }
+
+    /**
+     * Log database queries and bindings to the standard log
+     * Only when in debug mode and not running unit tests
+     */
+    protected function bootDBLogger(): void
+    {
+        if ($this->app['config']['app']['debug'] && !$this->app->runningUnitTests()) {
+            $this->app['db.connection']->listen(function ($query) {
+                $this->app['log']->info($query->sql, ['bindings' => $query->bindings]);
+            });
+        }
     }
 
     /**

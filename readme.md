@@ -22,12 +22,6 @@ For these, you can run `bin/dev/artisan` or `bin/dev/composer` if you're using t
 
 `composer ide-helper-update`
 
-**PHPDoc Generation**
-
-`composer phpdoc` generates documentation in `docs/phpdoc`
-
-*Please note that this can not be ran in the Docker container because it uses a Docker container*
-
 **PHP Lines of Code Generation**
 
 `composer phploc` generates lines of code output in `docs/phploc.txt`

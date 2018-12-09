@@ -1,7 +1,4 @@
 <?php
-/**
- * Logging Config
- */
 declare(strict_types=1);
 
 use Monolog\Handler\StreamHandler;

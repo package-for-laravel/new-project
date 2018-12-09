@@ -1,7 +1,4 @@
 <?php
-/**
- * Broadcast Config
- */
 declare(strict_types=1);
 
 return [

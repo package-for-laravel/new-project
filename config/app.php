@@ -1,7 +1,4 @@
 <?php
-/**
- * App Config
- */
 declare(strict_types=1);
 
 return [

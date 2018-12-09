@@ -1,7 +1,4 @@
 <?php
-/**
- * Cache Config
- */
 declare(strict_types=1);
 
 return [

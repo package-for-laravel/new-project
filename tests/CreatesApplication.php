@@ -1,7 +1,4 @@
 <?php
-/**
- * Creates the application
- */
 declare(strict_types=1);
 
 namespace Tests;

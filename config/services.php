@@ -1,7 +1,4 @@
 <?php
-/**
- * Service Config
- */
 declare(strict_types=1);
 
 return [

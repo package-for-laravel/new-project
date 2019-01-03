@@ -43,8 +43,3 @@ For these, you can run `bin/dev/artisan` or `bin/dev/composer` if you're using t
 - Install Laravel from the create-project format
 - Copies over `.env.example` to `.env`
 - Copies over `docker-compose.yml.example` to `docker-compose.yml`
-
-## Todo
-
-- [ ] `"@php -r \"require 'vendor/autoload.php'; file_put_contents('readme.md', PHP_EOL . '## Info' . PHP_EOL . PHP_EOL . 'Laravel Boot Version: ' . \\PackageVersions\\Versions::getVersion('aaronsaray/laravel-boot') . PHP_EOL, FILE_APPEND);\"",`  Can this be used somewhere?
-       

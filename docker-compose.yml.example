@@ -1,7 +1,7 @@
 version: "3.1"
 services:
     mysql:
-        image: mysql:5.7
+        image: mysql:8.0.16
         container_name: app-mysql
         volumes:
         - ./docker/mysql/data:/var/lib/mysql:delegated
@@ -12,18 +12,20 @@ services:
         - MYSQL_PASSWORD=app
         ports:
         - "33306:3306"
+        command: ['--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci','--default-authentication-plugin=mysql_native_password']
 
     mysql-test:
-        image: mysql:5.7
+        image: mysql:8.0.16
         container_name: app-mysql-test
         environment:
         - MYSQL_ROOT_PASSWORD=password
         - MYSQL_DATABASE=apptest
         - MYSQL_USER=app
         - MYSQL_PASSWORD=app
+        command: ['--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci','--default-authentication-plugin=mysql_native_password']
 
     webserver:
-        image: nginx:alpine
+        image: nginx:1.15.12-alpine
         container_name: app-webserver
         working_dir: /app
         volumes:

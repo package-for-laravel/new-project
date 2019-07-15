@@ -58,10 +58,10 @@
             "@php artisan key:generate"
         ],
         "test": [
-            "@php vendor/bin/phpunit --colors=always"
+            "phpunit --colors=always"
         ],
         "test-coverage": [
-            "@php vendor/bin/phpunit --colors=always --coverage-html=tests/html-coverage"
+            "phpunit --colors=always --coverage-html=tests/html-coverage"
         ],
         "ide-helper-update": [
             "@php artisan clear-compiled",
@@ -70,13 +70,13 @@
             "@php artisan ide-helper:models --write"
         ],
         "phploc": [
-            "@php vendor/bin/phploc app bootstrap config database routes tests > docs/phploc.txt"
+            "phploc app bootstrap config database routes tests > docs/phploc.txt"
         ],
         "phpcpd": [
-            "@php vendor/bin/phpcpd app bootstrap config database routes tests"
+            "phpcpd app bootstrap config database routes tests"
         ],
         "phpcs": [
-            "@php vendor/bin/phpcs"
+            "phpcs"
         ],
         "larastan": [
             "@php artisan code:analyse  --level=max --paths=\"app,tests\""

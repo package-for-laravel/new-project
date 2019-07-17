@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2f9c15c31bc9cd6e98727fbeaade3bd6",
+    "content-hash": "ab7bbff11940872abe5702ddb6658e0c",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -340,16 +340,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.8.19",
+            "version": "v5.8.29",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "47bb1471b727a0c1497143dccf46aacf73c0ce6b"
+                "reference": "489ae2218c7eb138caac780de584d8df9fe8160b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/47bb1471b727a0c1497143dccf46aacf73c0ce6b",
-                "reference": "47bb1471b727a0c1497143dccf46aacf73c0ce6b",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/489ae2218c7eb138caac780de584d8df9fe8160b",
+                "reference": "489ae2218c7eb138caac780de584d8df9fe8160b",
                 "shasum": ""
             },
             "require": {
@@ -483,7 +483,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2019-05-28T13:19:37+00:00"
+            "time": "2019-07-16T14:05:28+00:00"
         },
         {
             "name": "league/flysystem",
@@ -2564,20 +2564,20 @@
     "packages-dev": [
         {
             "name": "aaronsaray/laravel-test-helpers",
-            "version": "1.0.2",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/aaronsaray/laravel-test-helpers.git",
-                "reference": "0f56fe2db8b8eb8c1e027e76622a1d243a587022"
+                "reference": "b1dcd17faf72aeed7627e2ef1a773126865abfc5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/aaronsaray/laravel-test-helpers/zipball/0f56fe2db8b8eb8c1e027e76622a1d243a587022",
-                "reference": "0f56fe2db8b8eb8c1e027e76622a1d243a587022",
+                "url": "https://api.github.com/repos/aaronsaray/laravel-test-helpers/zipball/b1dcd17faf72aeed7627e2ef1a773126865abfc5",
+                "reference": "b1dcd17faf72aeed7627e2ef1a773126865abfc5",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.0"
+                "php": "^7.1"
             },
             "type": "library",
             "autoload": {
@@ -2596,7 +2596,7 @@
                 }
             ],
             "description": "Laravel test helpers by Aaron Saray.",
-            "time": "2018-11-10T19:57:05+00:00"
+            "time": "2019-06-14T00:12:52+00:00"
         },
         {
             "name": "barryvdh/laravel-ide-helper",
@@ -3312,16 +3312,16 @@
         },
         {
             "name": "filp/whoops",
-            "version": "2.3.1",
+            "version": "2.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/filp/whoops.git",
-                "reference": "bc0fd11bc455cc20ee4b5edabc63ebbf859324c7"
+                "reference": "6fb502c23885701a991b0bba974b1a8eb6673577"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/filp/whoops/zipball/bc0fd11bc455cc20ee4b5edabc63ebbf859324c7",
-                "reference": "bc0fd11bc455cc20ee4b5edabc63ebbf859324c7",
+                "url": "https://api.github.com/repos/filp/whoops/zipball/6fb502c23885701a991b0bba974b1a8eb6673577",
+                "reference": "6fb502c23885701a991b0bba974b1a8eb6673577",
                 "shasum": ""
             },
             "require": {
@@ -3369,7 +3369,7 @@
                 "throwable",
                 "whoops"
             ],
-            "time": "2018-10-23T09:00:00+00:00"
+            "time": "2019-07-04T09:00:00+00:00"
         },
         {
             "name": "fzaninotto/faker",

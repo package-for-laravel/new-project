@@ -76,7 +76,7 @@
         ],
         "phpcs": [
             "phpcs"
-        ],
+        ]
     },
     "scripts-descriptions": {
         "test": "Run all PHPUnit tests.",

@@ -14,34 +14,38 @@
         "jsloc": "cloc resources/js --report-file=docs/jsloc.txt"
     },
     "devDependencies": {
+        "@vue/test-utils": "1.0.0-beta.29",
         "axios": "^0.19.0",
+        "babel-core": "^6.26.3",
+        "babel-preset-env": "^1.7.0",
         "bootstrap": "^4.3.1",
+        "cloc": "2.5.0",
         "cross-env": "^5.1",
-        "eslint": "^5.12.1",
-        "eslint-config-airbnb-base": "^13.1.0",
-        "eslint-plugin-import": "^2.15.0",
+        "eslint": "^6.1.0",
+        "eslint-config-airbnb-base": "^14.0.0",
+        "eslint-plugin-import": "^2.18.2",
+        "eslint-plugin-jest": "22.15.0",
         "flush-promises": "^1.0.2",
         "jest": "^24.8.0",
-        "jquery": "^3.4.1",
         "laravel-mix": "^4.1.2",
-        "lodash": "^4.17.14",
-        "popper.js": "^1.12",
-        "resolve-url-loader": "^2.3.1",
-        "sass": "^1.15.2",
-        "sass-loader": "^7.1.0",
-        "vue": "^2.5.17"
+        "resolve-url-loader": "^3.1.0",
+        "sass": "^1.22.9",
+        "sass-loader": "^7.2.0",
+        "vue": "^2.6.10",
+        "vue-jest": "^3.0.4",
+        "vue-template-compiler": "2.6.10"
     },
     "jest": {
         "moduleFileExtensions": [
             "js",
-            "jsx"
+            "vue"
         ],
         "transform": {
-            "^.+\\.js$": "<rootDir>/node_modules/babel-jest",
-            "^.+\\.jsx$": "<rootDir>/node_modules/babel-jest"
+            "^.+\\.js$": "babel-jest",
+            ".*\\.(vue)$": "vue-jest"
         },
         "collectCoverageFrom": [
-            "<rootDir>/resources/js/**/*.{js,jsx}"
+            "<rootDir>/resources/js/**/*.{js,vue}"
         ],
         "coverageDirectory": "<rootDir>/tests/js-coverage"
     },
@@ -49,14 +53,7 @@
         "env": {
             "test": {
                 "presets": [
-                    [
-                        "env",
-                        {
-                            "targets": {
-                                "node": "current"
-                            }
-                        }
-                    ]
+                    "babel-preset-env"
                 ]
             }
         }

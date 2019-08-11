@@ -3,14 +3,12 @@ declare(strict_types=1);
 
 namespace Tests\Unit;
 
-use Tests\TestCase;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 
 /**
  * Class ExampleTest
  * @package Tests\Unit
  */
-class ExampleTest extends TestCase
+class ExampleTest extends UnitTestCase
 {
     /**
      * A basic test example.

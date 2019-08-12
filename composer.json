@@ -76,6 +76,10 @@
         ],
         "phpcs": [
             "phpcs"
+        ],
+        "deploy":[
+            "@php artisan config:cache",
+            "@php artisan route:cache"
         ]
     },
     "scripts-descriptions": {
@@ -85,7 +89,8 @@
         "phpdoc": "Runs phpDocumentor phpdoc generation and puts it in docs/phpdoc",
         "phploc": "Runs phploc and puts output in docs/phploc.txt",
         "phpcpd": "Runs phpcpd copy and paste detector",
-        "phpcs": "Runs phpcs with PSR12 on app and tests folder"
+        "phpcs": "Runs phpcs with PSR12 on app and tests folder",
+        "deploy":"Run this to deploy this application to a production or production-like server"
     },
     "suggest": {
         "aaronsaray/laravel-api-tools": "Tools for a laravel api install.",

@@ -16,10 +16,6 @@ For these, you can run `bin/dev/artisan` or `bin/dev/composer` if you're using t
 
 `npm run test` for Javascript tests
 
-**PHPStan / Larastan**
-
-`./artisan code:analyse --level=max --paths="app,tests"`
-
 **IDE Helper**
 
 `composer ide-helper-update`

@@ -3,6 +3,8 @@ declare(strict_types=1);
 
 namespace Tests\Feature;
 
+use PackageForLaravel\TestingFramework\TestCases\FeatureTestCase;
+
 /**
  * Class ExampleTest
  * @package Tests\Feature

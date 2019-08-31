@@ -6,10 +6,9 @@
     "require": {
         "php": "^7.3",
         "fideloper/proxy": "^4.1",
-        "laravel/framework": "5.8.31"
+        "laravel/framework": "5.8.34"
     },
     "require-dev": {
-        "aaronsaray/laravel-test-helpers": "^1.1",
         "barryvdh/laravel-ide-helper": "2.6.2",
         "doctrine/dbal": "^2.8",
         "filp/whoops": "^2.5",
@@ -17,6 +16,7 @@
         "mockery/mockery": "^1.2",
         "nunomaduro/collision": "^3.0",
         "ocramius/package-versions": "^1.5",
+        "package-for-laravel/testing-framework": "^1.0",
         "phploc/phploc": "^5.0",
         "phpunit/phpunit": "^8.3",
         "roave/security-advisories": "dev-master",
@@ -93,8 +93,8 @@
         "deploy":"Run this to deploy this application to a production or production-like server"
     },
     "suggest": {
-        "aaronsaray/laravel-api-tools": "Tools for a laravel api install.",
-        "aaronsaray/laravel-legacy-passwords": "For migrating over old passwords",
+        "package-for-laravel/api-tools": "Tools for a laravel api install.",
+        "package-for-laravel/legacy-passwords": "For migrating over old passwords",
         "owen-it/laravel-auditing": "For auditing eloquent models",
         "spatie/laravel-cors": "CORS support for API",
         "spatie/laravel-permission": "Permission System",

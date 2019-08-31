@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "568aef811cb4f24503000945c27d545a",
+    "content-hash": "b1ddaa72095482be4975eadac57b8156",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -349,16 +349,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v5.8.31",
+            "version": "v5.8.34",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "24cc1786bd55876fa52380306354772355345efd"
+                "reference": "c3a870b96c7afe5174f486af74768ccfddeec77b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/24cc1786bd55876fa52380306354772355345efd",
-                "reference": "24cc1786bd55876fa52380306354772355345efd",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/c3a870b96c7afe5174f486af74768ccfddeec77b",
+                "reference": "c3a870b96c7afe5174f486af74768ccfddeec77b",
                 "shasum": ""
             },
             "require": {
@@ -492,7 +492,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2019-08-06T15:09:02+00:00"
+            "time": "2019-08-27T14:35:59+00:00"
         },
         {
             "name": "league/flysystem",
@@ -2403,16 +2403,16 @@
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v4.3.3",
+            "version": "v4.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "e4110b992d2cbe198d7d3b244d079c1c58761d07"
+                "reference": "641043e0f3e615990a0f29479f9c117e8a6698c6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/e4110b992d2cbe198d7d3b244d079c1c58761d07",
-                "reference": "e4110b992d2cbe198d7d3b244d079c1c58761d07",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/641043e0f3e615990a0f29479f9c117e8a6698c6",
+                "reference": "641043e0f3e615990a0f29479f9c117e8a6698c6",
                 "shasum": ""
             },
             "require": {
@@ -2475,7 +2475,7 @@
                 "debug",
                 "dump"
             ],
-            "time": "2019-07-27T06:42:46+00:00"
+            "time": "2019-08-26T08:26:39+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
@@ -2578,42 +2578,6 @@
         }
     ],
     "packages-dev": [
-        {
-            "name": "aaronsaray/laravel-test-helpers",
-            "version": "1.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/aaronsaray/laravel-test-helpers.git",
-                "reference": "b1dcd17faf72aeed7627e2ef1a773126865abfc5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/aaronsaray/laravel-test-helpers/zipball/b1dcd17faf72aeed7627e2ef1a773126865abfc5",
-                "reference": "b1dcd17faf72aeed7627e2ef1a773126865abfc5",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.1"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "AaronSaray\\LaravelTestHelpers\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Aaron Saray",
-                    "email": "aaron@aaronsaray.com"
-                }
-            ],
-            "description": "Laravel test helpers by Aaron Saray.",
-            "time": "2019-06-14T00:12:52+00:00"
-        },
         {
             "name": "barryvdh/laravel-ide-helper",
             "version": "v2.6.2",
@@ -3866,6 +3830,38 @@
             ],
             "description": "Composer plugin that provides efficient querying for installed package versions (no runtime IO)",
             "time": "2019-07-17T15:49:50+00:00"
+        },
+        {
+            "name": "package-for-laravel/testing-framework",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/package-for-laravel/testing-framework.git",
+                "reference": "5b90bb9354e12c8df7b46752c732623d24bd6f40"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/package-for-laravel/testing-framework/zipball/5b90bb9354e12c8df7b46752c732623d24bd6f40",
+                "reference": "5b90bb9354e12c8df7b46752c732623d24bd6f40",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "^5.8",
+                "php": "^7.3",
+                "phpunit/phpunit": "^8"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "PackageForLaravel\\TestingFramework\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Useful library functionality for testing Laravel Apps",
+            "time": "2019-08-31T22:29:59+00:00"
         },
         {
             "name": "phar-io/manifest",

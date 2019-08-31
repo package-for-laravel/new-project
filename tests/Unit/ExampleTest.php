@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Tests\Unit;
 
+use PackageForLaravel\TestingFramework\TestCases\UnitTestCase;
 
 /**
  * Class ExampleTest

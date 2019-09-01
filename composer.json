@@ -92,7 +92,6 @@
         "test": "Run all PHPUnit tests.",
         "test-coverage": "Run all PHPUnit tests, put HTML coverage in tests/html-coverage",
         "ide-helper-update": "Runs the ide-helper generate, meta and models command",
-        "phpdoc": "Runs phpDocumentor phpdoc generation and puts it in docs/phpdoc",
         "phploc": "Runs phploc and puts output in docs/phploc.txt",
         "phpcpd": "Runs phpcpd copy and paste detector",
         "phpcs": "Runs phpcs with PSR12 on app and tests folder",

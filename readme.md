@@ -4,6 +4,12 @@
 
 My Laravel boot up framework that I use to scaffold projects.
 
+To create a new project with this framework, run the following command:
+
+`composer create-project package-for-laravel/new-project $1`
+
+Where `$1` is the folder name you'd like to install into.
+
 ## Development Notes
 
 For these, you can run `bin/dev/artisan` or `bin/dev/composer` if you're using the Docker configuration.

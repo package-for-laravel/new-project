@@ -93,7 +93,7 @@
         "deploy":"Run this to deploy this application to a production or production-like server"
     },
     "suggest": {
-        "package-for-laravel/api-tools": "Tools for a laravel api install.",
+        "package-for-laravel/api": "Tools for a laravel api install.",
         "package-for-laravel/legacy-passwords": "For migrating over old passwords",
         "owen-it/laravel-auditing": "For auditing eloquent models",
         "spatie/laravel-cors": "CORS support for API",

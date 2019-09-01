@@ -1,4 +1,6 @@
-# Laravel Boot
+# Package for Laravel New Project
+
+*Formerly Laravel Boot*
 
 My Laravel boot up framework that I use to scaffold projects.
 

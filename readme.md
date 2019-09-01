@@ -49,3 +49,7 @@ For these, you can run `bin/dev/artisan` or `bin/dev/composer` if you're using t
 - Install Laravel from the create-project format
 - Copies over `.env.example` to `.env`
 - Copies over `docker-compose.yml.example` to `docker-compose.yml`
+
+## Credits
+
+This package is created and maintained by [Aaron Saray](https://github.com/aaronsaray) 

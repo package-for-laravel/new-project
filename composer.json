@@ -1,6 +1,12 @@
 {
     "name": "package-for-laravel/new-project",
-    "description": "Laravel Framework and Tools",
+    "description": "Toolbox to boot up a Laravel Framework and Tools",
+    "authors": [
+        {
+            "name": "Aaron Saray",
+            "email": "aaron@aaronsaray.com"
+        }
+    ],
     "license": "MIT",
     "type": "project",
     "require": {

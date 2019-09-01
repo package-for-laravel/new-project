@@ -99,6 +99,7 @@
     },
     "suggest": {
         "package-for-laravel/api": "Tools for a laravel api install.",
+        "package-for-laravel/blade": "Blade helpers and tools",
         "package-for-laravel/legacy-passwords": "For migrating over old passwords",
         "owen-it/laravel-auditing": "For auditing eloquent models",
         "spatie/laravel-cors": "CORS support for API",

@@ -12,10 +12,10 @@
     "require": {
         "php": "^7.3",
         "fideloper/proxy": "^4.1",
-        "laravel/framework": "5.8.34"
+        "laravel/framework": "^6.0"
     },
     "require-dev": {
-        "barryvdh/laravel-ide-helper": "2.6.2",
+        "barryvdh/laravel-ide-helper": "^2.6",
         "doctrine/dbal": "^2.8",
         "filp/whoops": "^2.5",
         "fzaninotto/faker": "^1.8",

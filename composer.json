@@ -16,9 +16,11 @@
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.6",
-        "doctrine/dbal": "^2.8",
+        "doctrine/dbal": "^2.9",
         "filp/whoops": "^2.5",
+        "facade/ignition": "^1.0",
         "fzaninotto/faker": "^1.8",
+        "laravel/tinker": "^1.0",
         "mockery/mockery": "^1.2",
         "nunomaduro/collision": "^3.0",
         "ocramius/package-versions": "^1.5",

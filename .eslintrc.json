@@ -1,14 +1,15 @@
 {
-    "extends": "airbnb-base",
+    "extends": ["airbnb-base", "prettier"],
     "rules": {
         "import/no-extraneous-dependencies": [
             "error",
             {
                 "devDependencies": true
             }
-        ]
+        ],
+        "prettier/prettier": ["error"]
     },
-    "plugins": ["jest"],
+    "plugins": ["prettier", "jest"],
     "env": {
         "jest/globals": true
     }

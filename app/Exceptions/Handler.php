@@ -9,7 +9,6 @@ use Symfony\Component\HttpFoundation\Response;
 
 /**
  * Class Handler
- * @package App\Exceptions
  */
 class Handler extends ExceptionHandler
 {

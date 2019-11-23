@@ -12,13 +12,12 @@
     "require": {
         "php": "^7.3",
         "fideloper/proxy": "^4.1",
-        "laravel/framework": "^6.0"
+        "laravel/framework": "^6.5"
     },
     "require-dev": {
         "barryvdh/laravel-ide-helper": "^2.6",
         "doctrine/dbal": "^2.9",
-        "filp/whoops": "^2.5",
-        "facade/ignition": "^1.0",
+        "facade/ignition": "^1.4",
         "fzaninotto/faker": "^1.8",
         "laravel/tinker": "^1.0",
         "mockery/mockery": "^1.2",
@@ -30,6 +29,18 @@
         "roave/security-advisories": "dev-master",
         "sebastian/phpcpd": "^4.1",
         "squizlabs/php_codesniffer": "^3.4"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": [
+                "barryvdh/laravel-ide-helper"
+            ]
+        }
     },
     "autoload": {
         "psr-4": {
@@ -45,13 +56,8 @@
             "Tests\\": "tests/"
         }
     },
-    "extra": {
-        "laravel": {
-            "dont-discover": [
-                "barryvdh/laravel-ide-helper"
-            ]
-        }
-    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "scripts": {
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
@@ -62,7 +68,7 @@
             "@php -r \"file_exists('docker-compose.yml') || copy('docker-compose.yml.example', 'docker-compose.yml');\""
         ],
         "post-create-project-cmd": [
-            "@php artisan key:generate"
+            "@php artisan key:generate --ansi"
         ],
         "test": [
             "phpunit --colors=always"
@@ -108,12 +114,5 @@
         "spatie/laravel-permission": "Permission System",
         "zircote/swagger-php": "Open API Generation for API",
         "bugsnag/bugsnag-laravel":"Bugsnag for Laravel"
-    },
-    "config": {
-        "preferred-install": "dist",
-        "sort-packages": true,
-        "optimize-autoloader": true
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    }
 }

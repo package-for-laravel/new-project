@@ -12,7 +12,7 @@ Where `$1` is the folder name you'd like to install into.
 
 ## Development Notes
 
-For these, you can run `bin/dev/artisan` or `bin/dev/composer` if you're using the Docker configuration.
+For these, you can run `bin/dev/artisan`, `bin/dev/composer` and `bin/dev/npm` if you're using the Docker configuration.
 
 **Unit Testing**
 

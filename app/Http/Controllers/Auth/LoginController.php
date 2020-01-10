@@ -1,4 +1,5 @@
 <?php
+
 declare(strict_types=1);
 
 namespace App\Http\Controllers\Auth;
@@ -11,6 +12,8 @@ use Illuminate\Foundation\Auth\AuthenticatesUsers;
  */
 class LoginController extends Controller
 {
+    use AuthenticatesUsers;
+
     /*
     |--------------------------------------------------------------------------
     | Login Controller
@@ -21,8 +24,6 @@ class LoginController extends Controller
     | to conveniently provide its functionality to your applications.
     |
     */
-
-    use AuthenticatesUsers;
 
     /**
      * Where to redirect users after login.

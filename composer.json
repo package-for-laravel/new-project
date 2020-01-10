@@ -11,6 +11,7 @@
     "type": "project",
     "require": {
         "php": "^7.3",
+        "ext-SimpleXML": "^7.3",
         "fideloper/proxy": "^4.1",
         "laravel/framework": "^6.5"
     },
@@ -18,6 +19,7 @@
         "barryvdh/laravel-ide-helper": "^2.6",
         "doctrine/dbal": "^2.9",
         "facade/ignition": "^1.4",
+        "friendsofphp/php-cs-fixer": "^2.16",
         "fzaninotto/faker": "^1.8",
         "laravel/tinker": "^1.0",
         "mockery/mockery": "^1.2",
@@ -28,7 +30,8 @@
         "phpunit/phpunit": "^8.3",
         "roave/security-advisories": "dev-master",
         "sebastian/phpcpd": "^4.1",
-        "squizlabs/php_codesniffer": "^3.4"
+        "slevomat/coding-standard": "^6.0",
+        "squizlabs/php_codesniffer": "^3.5"
     },
     "config": {
         "optimize-autoloader": true,
@@ -73,14 +76,23 @@
         "test": [
             "phpunit --colors=always"
         ],
-        "test-coverage": [
+        "test-with-coverage": [
             "phpunit --colors=always --coverage-html=tests/html-coverage"
+        ],
+        "deploy":[
+            "@php artisan config:cache",
+            "@php artisan route:cache"
         ],
         "ide-helper-update": [
             "@php artisan clear-compiled",
             "@php artisan ide-helper:generate",
             "@php artisan ide-helper:meta",
             "@php artisan ide-helper:models --write"
+        ],
+        "php-lint": [
+            "@phpcs",
+            "php-cs-fixer fix -v --dry-run",
+            "@phpcpd"
         ],
         "phploc": [
             "phploc app bootstrap config database routes tests > docs/phploc.txt"
@@ -90,20 +102,17 @@
         ],
         "phpcs": [
             "phpcs"
-        ],
-        "deploy":[
-            "@php artisan config:cache",
-            "@php artisan route:cache"
         ]
     },
     "scripts-descriptions": {
         "test": "Run all PHPUnit tests.",
         "test-coverage": "Run all PHPUnit tests, put HTML coverage in tests/html-coverage",
+        "deploy":"Run this to deploy this application to a production or production-like server",
         "ide-helper-update": "Runs the ide-helper generate, meta and models command",
+        "php-lint": "Runs the PHP linting suite, including phpcs, php-cs-fixer in dry run mode, and phpcpd",
         "phploc": "Runs phploc and puts output in docs/phploc.txt",
         "phpcpd": "Runs phpcpd copy and paste detector",
-        "phpcs": "Runs phpcs with PSR12 on app and tests folder",
-        "deploy":"Run this to deploy this application to a production or production-like server"
+        "phpcs": "Runs phpcs with PSR12 on app and tests folder"
     },
     "suggest": {
         "package-for-laravel/api": "Tools for a laravel api install.",

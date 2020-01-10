@@ -32,17 +32,19 @@ For these, you can run `bin/dev/artisan`, `bin/dev/composer` and `bin/dev/npm` i
 
 `composer phploc` generates lines of code output in `docs/phploc.txt`
 
-**PHP Copy Paste Detection**
-
-`composer phpcpd` 
-
-**PHP Code Sniffer**
-
-`composer phpcs` does a report to standard out based on PSR12
-
 **JS Lines of Code**
 
 `npm run jsloc` generates lines of code output in `docs/jsloc.txt`
+
+**PHP Linting**
+
+`composer php-lint` will run PHPCS, PHP-Code-Sniffer (in Dry Run) and PHP Copy Paste Detector.
+
+## Deployment 
+
+There is a section of the composer file that has steps for deployment.
+
+`composer deploy` will run Laravel config and route caching.
 
 ## Laravel Boot Automated Functions
 

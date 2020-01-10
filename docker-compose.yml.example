@@ -1,10 +1,10 @@
-version: "3.1"
+version: "3.7"
 services:
     mysql:
-        image: mysql:8.0.17
-        container_name: app-mysql
+        container_name: "${DOCKER_CONTAINER_PREFIX}-mysql"
+        image: mysql:8.0.18
         volumes:
-        - ./docker/mysql/data:/var/lib/mysql:delegated
+        - /var/lib/mysql
         environment:
         - MYSQL_ROOT_PASSWORD=password
         - MYSQL_DATABASE=app
@@ -15,8 +15,8 @@ services:
         command: ['--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci','--default-authentication-plugin=mysql_native_password']
 
     mysql-test:
-        image: mysql:8.0.17
-        container_name: app-mysql-test
+        container_name: "${DOCKER_CONTAINER_PREFIX}-mysql-test"
+        image: mysql:8.0.18
         environment:
         - MYSQL_ROOT_PASSWORD=password
         - MYSQL_DATABASE=apptest
@@ -24,9 +24,9 @@ services:
         - MYSQL_PASSWORD=app
         command: ['--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci','--default-authentication-plugin=mysql_native_password']
 
-    webserver:
-        image: nginx:1.17.2-alpine
-        container_name: app-webserver
+    nginx:
+        container_name: "${DOCKER_CONTAINER_PREFIX}-nginx"
+        image: nginx:1.17.7-alpine
         working_dir: /app
         volumes:
         - .:/app:delegated
@@ -37,8 +37,8 @@ services:
           - php-fpm
 
     php-fpm:
+        container_name: "${DOCKER_CONTAINER_PREFIX}-php-fpm"
         build: docker/php-fpm
-        container_name: app-php-fpm
         working_dir: /app
         volumes:
         - .:/app:delegated
@@ -46,3 +46,7 @@ services:
           - mysql
         environment:
             PHP_IDE_CONFIG: "serverName=laravel-boot.test"
+
+networks:
+  default:
+    name: "${DOCKER_CONTAINER_PREFIX}-default"

@@ -13,5 +13,4 @@ yarn-error.log
 .env
 .phpunit.result.cache
 tests/html-coverage
-docker-compose.yml
 /.php_cs.cache

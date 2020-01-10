@@ -14,6 +14,10 @@ Where `$1` is the folder name you'd like to install into.
 
 For these, you can run `bin/dev/artisan`, `bin/dev/composer` and `bin/dev/npm` if you're using the Docker configuration.
 
+**Configuration**
+
+All configuration options are defined in the `.env` file. You may change Docker settings there as well.
+
 **Unit Testing**
 
 `composer test` for tests (you can also use `bin/dev/test` followed by any PHPUnit arguments to run the test in docker container)
@@ -50,7 +54,6 @@ There is a section of the composer file that has steps for deployment.
 
 - Install Laravel from the create-project format
 - Copies over `.env.example` to `.env`
-- Copies over `docker-compose.yml.example` to `docker-compose.yml`
 
 ## Credits
 

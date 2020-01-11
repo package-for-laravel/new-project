@@ -8,7 +8,6 @@ use PackageForLaravel\TestingFramework\TestCases\IntegrationTestCase;
 
 /**
  * Class ExampleTest
- * @package Tests\Integration
  */
 class ExampleTest extends IntegrationTestCase
 {

@@ -8,7 +8,6 @@ use PackageForLaravel\TestingFramework\TestCases\UnitTestCase;
 
 /**
  * Class ExampleTest
- * @package Tests\Unit
  */
 class ExampleTest extends UnitTestCase
 {

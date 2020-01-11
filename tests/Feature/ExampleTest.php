@@ -8,7 +8,6 @@ use PackageForLaravel\TestingFramework\TestCases\FeatureTestCase;
 
 /**
  * Class ExampleTest
- * @package Tests\Feature
  */
 class ExampleTest extends FeatureTestCase
 {

@@ -44,6 +44,7 @@ services:
         working_dir: /app
         volumes:
         - .:/app:delegated
+        - "$HOME/.composer/cache:/root/.composer/cache"
         depends_on:
           - mysql
         environment:

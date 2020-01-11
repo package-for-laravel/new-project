@@ -82,6 +82,27 @@ services:
       - "--"
       - "php-fpm"
 
+  ## The PHP-FPM that's used for unit tests and could possibly be used for production instances
+  php-fpm:
+    container_name: "${DOCKER_CONTAINER_PREFIX}-php-fpm"
+    build:
+      context: docker/php-fpm
+      target: base
+    working_dir: /app
+    volumes:
+      - .:/app:delegated
+      - "$HOME/.composer/cache:/root/.composer/cache"
+    depends_on:
+      - mysql
+    environment:
+      PHP_IDE_CONFIG: "serverName=${DOCKER_SERVER_NAME}"
+    restart: always
+    command:
+      - "./docker/wait-for.sh"
+      - "mysql:3306"
+      - "--"
+      - "php-fpm"
+
 networks:
   default:
     name: "${DOCKER_CONTAINER_PREFIX}-default"

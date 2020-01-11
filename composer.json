@@ -75,9 +75,6 @@
         "test": [
             "phpunit --colors=always"
         ],
-        "test-with-coverage": [
-            "phpunit --colors=always --coverage-html=tests/html-coverage"
-        ],
         "deploy":[
             "@php artisan config:cache",
             "@php artisan route:cache"
@@ -105,7 +102,6 @@
     },
     "scripts-descriptions": {
         "test": "Run all PHPUnit tests.",
-        "test-coverage": "Run all PHPUnit tests, put HTML coverage in tests/html-coverage",
         "deploy":"Run this to deploy this application to a production or production-like server",
         "ide-helper-update": "Runs the ide-helper generate, meta and models command",
         "php-lint": "Runs the PHP linting suite, including phpcs, php-cs-fixer in dry run mode, and phpcpd",

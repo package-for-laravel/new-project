@@ -50,6 +50,7 @@ services:
         environment:
             PHP_IDE_CONFIG: "serverName=${DOCKER_SERVER_NAME}"
         restart: always
+        command: ["./docker/wait-for.sh", "mysql:3306", "--", "php-fpm"]
 
 networks:
   default:

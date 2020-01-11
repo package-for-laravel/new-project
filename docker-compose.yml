@@ -1,56 +1,86 @@
+########################################################################################################################
+## Docker Compose file for Local and CI
+##
+## This creates a local development environment.  It can also be used for your CI work.  This should probably be adjusted
+## for production deployment.
+##
+## Important things to note:
+## - MySQL writes it's data to a volume.  Use `docker-compose up -d` and `docker-compose stop`.  Using `down` will
+##   remove the volume and you'll have to reseed your data.
+## - MySQL test is a copy of the container without a volume. All unit tests should rebuild their data.
+## - PHP-FPM has a debug version with xdebug loaded.  This is useful for regular development (so you can use xdebug)
+##   and for code coverage. This is not great for your regular unit tests.
+## - Make sure to set your ports, names, etc. in the `.env` file. All settings are prefixed `DOCKER_`
+########################################################################################################################
 version: "3.7"
+
 services:
-    mysql:
-        container_name: "${DOCKER_CONTAINER_PREFIX}-mysql"
-        image: mysql:8.0.18
-        volumes:
-        - /var/lib/mysql
-        environment:
-        - MYSQL_ROOT_PASSWORD=password
-        - MYSQL_DATABASE=app
-        - MYSQL_USER=app
-        - MYSQL_PASSWORD=app
-        ports:
-        - "${DOCKER_MYSQL_LOCAL_PORT}:3306"
-        command: ['--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci','--default-authentication-plugin=mysql_native_password']
-        restart: always
 
-    mysql-test:
-        container_name: "${DOCKER_CONTAINER_PREFIX}-mysql-test"
-        image: mysql:8.0.18
-        environment:
-        - MYSQL_ROOT_PASSWORD=password
-        - MYSQL_DATABASE=apptest
-        - MYSQL_USER=app
-        - MYSQL_PASSWORD=app
-        command: ['--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci','--default-authentication-plugin=mysql_native_password']
-        restart: always
+  ## The App MySQL
+  mysql:
+    container_name: "${DOCKER_CONTAINER_PREFIX}-mysql"
+    image: mysql:8.0.18
+    volumes:
+      - /var/lib/mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=app
+      - MYSQL_USER=app
+      - MYSQL_PASSWORD=app
+    ports:
+      - "${DOCKER_MYSQL_LOCAL_PORT}:3306"
+    command:
+      - "--character-set-server=utf8mb4"
+      - "--collation-server=utf8mb4_unicode_ci"
+      - "--default-authentication-plugin=mysql_native_password"
+    restart: always
 
-    nginx:
-        container_name: "${DOCKER_CONTAINER_PREFIX}-nginx"
-        build: docker/nginx
-        working_dir: /app
-        volumes:
-        - .:/app:delegated
-        ports:
-        - "${DOCKER_NGINX_LOCAL_PORT}:80"
-        depends_on:
-          - php-fpm-debug
-        restart: always
+  ## MySQL just for Unit Tests
+  mysql-test:
+    container_name: "${DOCKER_CONTAINER_PREFIX}-mysql-test"
+    image: mysql:8.0.18
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=apptest
+      - MYSQL_USER=app
+      - MYSQL_PASSWORD=app
+    command:
+      - "--character-set-server=utf8mb4"
+      - "--collation-server=utf8mb4_unicode_ci"
+      - "--default-authentication-plugin=mysql_native_password"
+    restart: always
 
-    php-fpm-debug:
-        container_name: "${DOCKER_CONTAINER_PREFIX}-php-fpm-debug"
-        build: docker/php-fpm
-        working_dir: /app
-        volumes:
-        - .:/app:delegated
-        - "$HOME/.composer/cache:/root/.composer/cache"
-        depends_on:
-          - mysql
-        environment:
-            PHP_IDE_CONFIG: "serverName=${DOCKER_SERVER_NAME}"
-        restart: always
-        command: ["./docker/wait-for.sh", "mysql:3306", "--", "php-fpm"]
+  ## NGINX to support the app, configured to use the php-fpm-debug server
+  nginx:
+    container_name: "${DOCKER_CONTAINER_PREFIX}-nginx"
+    build: docker/nginx
+    working_dir: /app
+    volumes:
+      - .:/app:delegated
+    ports:
+      - "${DOCKER_NGINX_LOCAL_PORT}:80"
+    depends_on:
+      - php-fpm-debug
+    restart: always
+
+  ## The PHP-FPM that's used for the app development, also useful for code coverage
+  php-fpm-debug:
+    container_name: "${DOCKER_CONTAINER_PREFIX}-php-fpm-debug"
+    build: docker/php-fpm
+    working_dir: /app
+    volumes:
+      - .:/app:delegated
+      - "$HOME/.composer/cache:/root/.composer/cache"
+    depends_on:
+      - mysql
+    environment:
+      PHP_IDE_CONFIG: "serverName=${DOCKER_SERVER_NAME}"
+    restart: always
+    command:
+      - "./docker/wait-for.sh"
+      - "mysql:3306"
+      - "--"
+      - "php-fpm"
 
 networks:
   default:

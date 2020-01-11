@@ -13,4 +13,5 @@ yarn-error.log
 .env
 .phpunit.result.cache
 tests/html-coverage
+tests/js-coverage
 /.php_cs.cache

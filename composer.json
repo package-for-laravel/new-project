@@ -11,7 +11,6 @@
     "type": "project",
     "require": {
         "php": "^7.3",
-        "ext-SimpleXML": "^7.3",
         "fideloper/proxy": "^4.1",
         "laravel/framework": "^6"
     },

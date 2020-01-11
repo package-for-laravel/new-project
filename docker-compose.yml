@@ -13,6 +13,7 @@ services:
         ports:
         - "${DOCKER_MYSQL_LOCAL_PORT}:3306"
         command: ['--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci','--default-authentication-plugin=mysql_native_password']
+        restart: always
 
     mysql-test:
         container_name: "${DOCKER_CONTAINER_PREFIX}-mysql-test"
@@ -23,6 +24,7 @@ services:
         - MYSQL_USER=app
         - MYSQL_PASSWORD=app
         command: ['--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci','--default-authentication-plugin=mysql_native_password']
+        restart: always
 
     nginx:
         container_name: "${DOCKER_CONTAINER_PREFIX}-nginx"
@@ -34,6 +36,7 @@ services:
         - "${DOCKER_NGINX_LOCAL_PORT}:80"
         depends_on:
           - php-fpm
+        restart: always
 
     php-fpm:
         container_name: "${DOCKER_CONTAINER_PREFIX}-php-fpm"
@@ -45,6 +48,7 @@ services:
           - mysql
         environment:
             PHP_IDE_CONFIG: "serverName=${DOCKER_SERVER_NAME}"
+        restart: always
 
 networks:
   default:

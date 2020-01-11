@@ -2,4 +2,4 @@
 
 source "`dirname $0`/../../.env"
 
-docker exec -it "$DOCKER_CONTAINER_PREFIX"-php-fpm-debug /usr/bin/env sh -c "COMPOSER_ALLOW_SUPERUSER=1 composer $@"
+docker exec -it "$DOCKER_CONTAINER_PREFIX"-php-fpm /usr/bin/env sh -c "COMPOSER_ALLOW_SUPERUSER=1 composer $@"

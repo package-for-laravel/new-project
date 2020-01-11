@@ -26,11 +26,10 @@ services:
 
     nginx:
         container_name: "${DOCKER_CONTAINER_PREFIX}-nginx"
-        image: nginx:1.17.7-alpine
+        build: docker/nginx
         working_dir: /app
         volumes:
         - .:/app:delegated
-        - ./docker/nginx/nginx.conf:/etc/nginx/conf.d/default.conf
         ports:
         - "${DOCKER_NGINX_LOCAL_PORT}:80"
         depends_on:

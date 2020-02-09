@@ -27,6 +27,9 @@
             <directory suffix=".php">./app</directory>
         </whitelist>
     </filter>
+    <listeners>
+        <listener class="NunoMaduro\Collision\Adapters\Phpunit\Listener" />
+    </listeners>
     <php>
         <server name="APP_ENV" value="testing"/>
         <server name="APP_KEY" value="base64:sPwbphi5hydaCSvjA9SdQ446CuLAfkg4fSZUnWaQZME="/>

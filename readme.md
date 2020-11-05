@@ -1,5 +1,9 @@
 # Package for Laravel New Project
 
+```
+ARCHIVED: This project is archived and no longer maintained.
+```
+
 *Formerly Laravel Boot*
 
 My Laravel boot up framework that I use to scaffold projects.
